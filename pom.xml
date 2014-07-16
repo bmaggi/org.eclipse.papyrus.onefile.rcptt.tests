@@ -68,7 +68,7 @@
             <!--
             <explicit>http://server/path/aut-archive.zip</explicit>
             -->
-            <explicit>https://www.dropbox.com/s/zzk5rh0ql2rqhlw/papyrus_linux_x64_2014-06-06.tar.gz</explicit>
+            <explicit>https://www.dropbox.com/s/zzk5rh0ql2rqhlw/papyrus_linux_x64_2014-06-06.tar.gz?dl=1<explicit>
            
             
             <!-- AUT can be downloaded automatically from Maven repository -->
