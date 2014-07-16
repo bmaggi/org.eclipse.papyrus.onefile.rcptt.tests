@@ -1,3 +1,4 @@
+# Configuration for https://travis-ci.org/
 language: java
 jdk:
   - oraclejdk7
