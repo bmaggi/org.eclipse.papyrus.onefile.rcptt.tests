@@ -1,0 +1,54 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: __yiTEAzEEeSQ-NvCUYGzeg,_hbIvcAzHEeSQ-NvCUYGzeg
+Element-Name: DeleteAllFilesModel
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _2T4K0AzFEeSQ-NvCUYGzeg
+Runtime-Version: 1.5.0.201406151150
+Save-Time: 7/16/14 11:00 AM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Move a model and check thats all files are moved
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | select PapyrusProjectAllFiles | get-menu "New/Folder" | click
+with [get-window "New Folder"] {
+    get-editbox -after [get-label "Folder name:"] | set-text destination
+    get-button Finish | click
+}
+with [get-view "Project Explorer" | get-tree] {
+    select "PapyrusProjectAllFiles/allFiles"
+    get-item "PapyrusProjectAllFiles/allFiles" | drag-start 16 11
+    get-item "PapyrusProjectAllFiles/allFiles" | drag-enter 22 2 -detail move
+    get-item "PapyrusProjectAllFiles/allFiles" | drag-over 24 0
+    get-item "PapyrusProjectAllFiles/destination" | drag-over 27 12 -detail move
+    get-item "PapyrusProjectAllFiles/allFiles" | drag-exit
+    get-item "PapyrusProjectAllFiles/destination" | drag-accept 27 12 -detail move
+    drag-set-data
+    get-item "PapyrusProjectAllFiles/destination" | drop 27 12 -detail move
+    drag-end -detail move
+}
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/css" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/html" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/notation" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true    
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/txt" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true    
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/uml" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true    
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/xmi" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true  
+get-view "Project Explorer" | get-tree | get-item "PapyrusProjectAllFiles/destination/allFiles/xwt" 
+    | get-property "getParentItem().getText()" | equals allFiles | verify-true      
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

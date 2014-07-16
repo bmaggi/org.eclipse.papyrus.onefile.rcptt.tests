@@ -1,0 +1,45 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: __yiTEAzEEeSQ-NvCUYGzeg,_hbIvcAzHEeSQ-NvCUYGzeg
+Element-Name: RenameAllFilesModel
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _muh6kPrSEeOz750HFwIa_w
+Runtime-Version: 1.5.0.201406151150
+Save-Time: 7/16/14 11:00 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | select "PapyrusProjectAllFiles/allFiles" | key-type F2
+with [get-window "Rename Resource"] {
+    get-editbox -after [get-label "New name:"] | set-text newname
+    get-button OK | click
+    get-window -class RenameParticipantsDialog | get-button OK | click
+}
+with [get-view "Project Explorer" | get-tree] {
+    get-item "PapyrusProjectAllFiles/allFiles.css" | get-property "getText()" | equals "allFiles.css" 
+        | verify-true
+    get-item "PapyrusProjectAllFiles/allFiles.html" | get-property "getText()" | equals "allFiles.html" 
+        | verify-true
+    get-item "PapyrusProjectAllFiles/allFiles.txt" | get-property "getText()" | equals "allFiles.txt" 
+        | verify-true
+    get-item "PapyrusProjectAllFiles/allFiles.xmi" | get-property "getText()" | equals "allFiles.xmi" 
+        | verify-true
+    get-item "PapyrusProjectAllFiles/allFiles.xwt" | get-property "getText()" | equals "allFiles.xwt" 
+        | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getText()" | equals newname | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getData().getClassName()" 
+        | equals "org.eclipse.papyrus.infra.onefile.model.impl.PapyrusFile" | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getData().getName()" | equals "newname.di" | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getData().getAssociatedResources().IResource[0].getName()" 
+        | equals "newname.di" | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getData().getAssociatedResources().IResource[1].getName()" 
+        | equals "newname.notation" | verify-true
+    get-item "PapyrusProjectAllFiles/newname" | get-property "getData().getAssociatedResources().IResource[2].getName()" 
+        | equals "newname.uml" | verify-true
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

@@ -1,0 +1,28 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: __yiTEAzEEeSQ-NvCUYGzeg,_hbIvcAzHEeSQ-NvCUYGzeg
+Element-Name: MoveAllFilesModel
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _dXvvUAzDEeSQ-NvCUYGzeg
+Runtime-Version: 1.5.0.201406151150
+Save-Time: 7/16/14 2:06 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Delete a model and check thats all files are deleted
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Project Explorer" | get-tree] {
+    select "PapyrusProjectAllFiles/allFiles" | key-type Del
+}
+get-view "Project Explorer" | get-tree | get-item PapyrusProjectAllFiles | get-property "getItems().length" | equals 0 
+    | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

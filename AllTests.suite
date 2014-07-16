@@ -1,0 +1,19 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: AllTests
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _O826oAzlEeSQ-NvCUYGzeg
+Runtime-Version: 1.5.0.201406151150
+Save-Time: 7/16/14 2:32 PM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_2T4K0AzFEeSQ-NvCUYGzeg	// kind: 'test' name: 'DeleteAllFilesModel' path: 'delete/DeleteAllFilesModel.test'
+_zdtZgAzGEeSQ-NvCUYGzeg	// kind: 'test' name: 'DeleteSampleModel' path: 'delete/DeleteSampleModel.test'
+_dXvvUAzDEeSQ-NvCUYGzeg	// kind: 'test' name: 'MoveAllFilesModel' path: 'move/MoveAllFilesModel.test'
+_muh6kPrSEeOz750HFwIa_w	// kind: 'test' name: 'RenameAllFilesModel' path: 'rename/RenameAllFilesModel.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
