@@ -68,7 +68,7 @@
             <!--
             <explicit>http://server/path/aut-archive.zip</explicit>
             -->
-            <explicit>https://www.dropbox.com/meta_dl/eyJzdWJfcGF0aCI6ICIiLCAidGVzdF9saW5rIjogZmFsc2UsICJzZXJ2ZXIiOiAiZGwuZHJvcGJveHVzZXJjb250ZW50LmNvbSIsICJpdGVtX2lkIjogbnVsbCwgImlzX2RpciI6IGZhbHNlLCAidGtleSI6ICJoOTNnZnM0d3NkeHM4bGkifQ/AAO3w_7ym_IPy_BYO__10_R0vAnO5LGSQJ3E2zymvmw5Sg?dl=1</explicit>
+            <explicit>https://www.dropbox.com/s/zzk5rh0ql2rqhlw/papyrus_linux_x64_2014-06-06.tar.gz</explicit>
            
             
             <!-- AUT can be downloaded automatically from Maven repository -->
