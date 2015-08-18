@@ -1,9 +1,15 @@
 org.eclipse.papyrus.onefile.rcptt.tests
 =======================================
 
+# Status
+
+License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
+
+# Description
+
 This project is an example on how to set up [Rcptt][2] tests for the [Papyrus project][1].
 
-To use :
+# To use :
  - zip the rcp you want to test
  - reference the zip in the pom.xml
 ```xml
