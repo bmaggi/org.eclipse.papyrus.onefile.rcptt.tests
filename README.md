@@ -5,6 +5,8 @@ org.eclipse.papyrus.onefile.rcptt.tests
 
 License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
 
+:warning: The third test is failing in my tested version (Papyrus Luna)
+
 # Description
 
 This project is an example on how to set up [Rcptt][2] tests for the [Papyrus project][1].
@@ -30,8 +32,6 @@ The expected log result should be looking like this one :
 [INFO] Failed Tests:
 [INFO] MoveAllFilesModel
 ```
-
-The third test is failing in my tested version (Papyrus Luna)
 
 You will find the result in target\results\org.eclipse.papyrus.onefile.rcptt.tests.html
  
