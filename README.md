@@ -7,6 +7,8 @@ License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://
 
 :warning: The third test is failing in my tested version (Papyrus Luna)
 
+:warning: RcpTT tests for Papyrus are now in the Papyrus tools repository [here][3]
+
 # Description
 
 This project is an example on how to set up [Rcptt][2] tests for the [Papyrus project][1].
@@ -37,3 +39,5 @@ You will find the result in target\results\org.eclipse.papyrus.onefile.rcptt.tes
  
 [1]: https://eclipse.org/papyrus/
 [2]: https://eclipse.org/rcptt/
+[3]: https://git.eclipse.org/c/papyrus/org.eclipse.papyrus.tools.git/tree/rcptt
+
