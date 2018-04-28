@@ -1,19 +1,15 @@
 org.eclipse.papyrus.onefile.rcptt.tests
 =======================================
+This project is an example on how to set up [Rcptt][2] tests for the [Papyrus project][1].
 
 # Status
-
-License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
+[![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
 
 :warning: The third test is failing in my tested version (Papyrus Luna)
 
 :warning: RcpTT tests for Papyrus are now in the Papyrus tools repository [here][3]
 
-# Description
-
-This project is an example on how to set up [Rcptt][2] tests for the [Papyrus project][1].
-
-# To use :
+# To use:
  - zip the rcp you want to test
  - reference the zip in the pom.xml
 ```xml
